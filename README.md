@@ -1,132 +1,84 @@
 # Comparando Mapas de Cores para Visualização Científica
 
-Este repositório contém um projeto de análise e visualização que compara o tradicional mapa de cores "rainbow" com três mapas de cores cientificamente derivados: **batlow**, **lapaz** e **bamako**.
-
-![Comparação de Gradientes](outputs/all_gradients_comparison.png)
-
 ## 📋 Sobre o Projeto
 
-Este trabalho foi desenvolvido como parte de uma atividade acadêmica sobre visualização de dados científicos. O objetivo principal é demonstrar como a escolha de mapas de cores impacta diretamente a interpretação e compreensão dos dados, podendo levar a conclusões equivocadas quando feita de maneira inadequada.
+Este trabalho foi desenvolvido como parte de uma atividade acadêmica sobre visualização de dados científicos, com o objetivo de analisar como diferentes escolhas de mapas de cores podem impactar significativamente a interpretação e compreensão dos dados.
 
-Um relatório completo com análises detalhadas está disponível no arquivo [Comparando_Mapas_de_Cores_para_Visualização_Científica__ou_Não_.pdf](Comparando_Mapas_de_Cores_para_Visualização_Científica__ou_Não_.pdf) neste repositório.
+## 🎯 Objetivos e Motivação
 
-## 🎯 Principais Objetivos
+A escolha adequada de mapas de cores é um aspecto frequentemente negligenciado na visualização científica, apesar de seu impacto significativo na interpretação dos dados. Este projeto tem como objetivos:
 
-- Analisar como diferentes mapas de cores afetam a interpretação dos dados
-- Demonstrar os problemas do mapa rainbow em contextos científicos
-- Apresentar alternativas cientificamente derivadas que melhoram a percepção e interpretação dos dados
-- Discutir aspectos de acessibilidade na escolha de mapas de cores
+- Demonstrar os problemas do tradicional mapa "rainbow" em contextos científicos
+- Comparar sua eficácia com mapas cientificamente derivados: **batlow**, **lapaz** e **bamako**
+- Avaliar aspectos de acessibilidade na escolha de mapas de cores
+- Evidenciar como escolhas inadequadas podem levar a conclusões errôneas
 
 ## 🧪 Fundamentação Teórica
 
-Este trabalho se baseia em conceitos apresentados nos artigos:
-- "Using Colour to Communicate" de Ed Hawkins
-- "The misuse of colour in science communication" (Crameri, F., Shephard, G.E. & Heron, P.J. Nature Communications 11, 5444, 2020)
-
-## 📊 Conjuntos de Dados
-
-Para esta análise, utilizamos três conjuntos de dados relacionados ao desenvolvimento humano global:
-
-- `human-development-index.csv`: Índice de Desenvolvimento Humano (IDH) global
-- `happiness-cantril-ladder.csv`: Índice de felicidade (Cantril ladder score)
-- `life-expectancy.csv`: Expectativa de vida global
-
-Todos os dados foram obtidos do repositório [Our World in Data](https://ourworldindata.org/).
+Este trabalho se baseia em conceitos apresentados nos artigos "Using Colour to Communicate" de Ed Hawkins e "The misuse of colour in science communication" (Crameri et al., Nature Communications, 2020), que discutem problemas do popular mapa rainbow e propõem alternativas cientificamente fundamentadas.
 
 ## 🎨 Mapas de Cores Analisados
 
+A análise comparou quatro mapas de cores distintos:
+
 1. **Rainbow**: Tradicionalmente usado em visualizações científicas, apresenta transições por todo o espectro de cores do arco-íris, do violeta ao vermelho.
-
 2. **Batlow**: Mapa científico que vai do azul escuro ao amarelo/laranja, com transições suaves e perceptualmente uniformes.
-
 3. **Lapaz**: Mapa científico com transição do azul para o branco/amarelo, projetado para ser perceptualmente uniforme.
-
 4. **Bamako**: Mapa científico com transição do azul para o magenta e amarelo, oferecendo uma alternativa estética distinta.
 
-## 📊 Visualizações Geradas
+<p align="center">
+  <img src="outputs/all_gradients_comparison.png" width="80%" alt="Comparação de Gradientes entre Rainbow, Batlow, Lapaz e Bamako">
+  <br>
+  <em>Comparação visual dos quatro mapas de cores analisados neste estudo</em>
+</p>
 
-O script gera cinco tipos de visualizações comparativas:
+## 📊 Metodologia
 
-### 1. Comparação de Gradientes
-![Gradientes](outputs/all_gradients_comparison.png)
+### Conjuntos de Dados
 
-Demonstra como cada mapa de cores representa um gradiente contínuo de valores.
+Os dados utilizados nesta análise foram obtidos do repositório [Our World in Data](https://ourworldindata.org/) e incluem:
 
-### 2. Gráficos de Barras
-![Barras](outputs/all_barplots_comparison.png)
+- Índice de Desenvolvimento Humano (IDH) global
+- Índice de felicidade (Cantril ladder score)
+- Expectativa de vida global
 
-Mostra o IDH dos 20 países com maior desenvolvimento usando cada mapa de cores.
+### Visualizações Desenvolvidas
 
-### 3. Gráficos de Dispersão
-![Dispersão](outputs/all_scatter_comparison.png)
+Foram gerados cinco tipos de visualizações comparativas para analisar o desempenho dos diferentes mapas de cores:
 
-Relaciona IDH e expectativa de vida com cada mapa de cores.
+1. **Comparação de Gradientes**: Demonstra como cada mapa de cores representa um gradiente contínuo de valores.
+2. **Gráficos de Barras**: Mostra o IDH dos 20 países com maior desenvolvimento.
+3. **Gráficos de Dispersão**: Relaciona IDH e expectativa de vida.
+4. **Mapas de Calor**: Visualiza correlações entre variáveis.
+5. **Simulação em Escala de Cinza**: Demonstra como cada mapa de cores é percebido quando convertido para escala de cinza.
 
-### 4. Mapas de Calor
-![Mapas de Calor](outputs/all_heatmap_comparison.png)
+## 📝 Principais Resultados
 
-Visualiza correlações usando cada mapa de cores.
+A análise comparativa demonstrou claramente que o mapa rainbow apresenta problemas significativos:
 
-### 5. Simulação em Escala de Cinza
-![Escala de Cinza](outputs/all_grayscale_comparison.png)
+- **Distorções perceptuais**: Diferentes regiões do espectro são percebidas de forma não uniforme
+- **Falsas estruturas**: Cria divisões artificiais em dados contínuos
+- **Problemas de acessibilidade**: Perde informação significativa quando convertido para escala de cinza
 
-Demonstra como cada mapa de cores é percebido quando convertido para escala de cinza, simulando a percepção de pessoas com deficiência na percepção de cores.
+Em contraste, os mapas cientificamente derivados demonstraram melhor:
 
-## 💻 Como Executar o Código
+- Uniformidade perceptual
+- Representação fiel dos dados subjacentes
+- Acessibilidade para pessoas com deficiência na percepção de cores
 
-### Pré-requisitos
+## 📚 Conteúdo do Repositório
 
-- Python 3.6 ou superior
-- Bibliotecas Python: pandas, matplotlib, numpy, seaborn, cmocean, colorcet, cmcrameri
+Este repositório contém:
 
-### Instalação das Dependências
+1. Scripts Python para geração das visualizações comparativas
+2. Conjuntos de dados sobre desenvolvimento humano global
+3. Visualizações geradas para demonstração
+4. Um relatório completo em PDF com todas as análises e conclusões
 
-```bash
-pip install pandas matplotlib numpy seaborn cmocean colorcet cmcrameri
-```
+## 📄 Conclusões e Referências
 
-### Execução
+Para conclusões detalhadas, incluindo análises específicas de cada visualização, bem como as referências bibliográficas completas, consulte o [relatório em PDF](Comparando_Mapas_de_Cores_para_Visualização_Científica__ou_Não_.pdf) disponível neste repositório.
 
-```bash
-python color_map_extended.py
-```
-
-Este comando irá:
-1. Carregar os conjuntos de dados
-2. Gerar as cinco visualizações comparativas
-3. Salvar as visualizações no diretório `outputs/`
-4. Criar um arquivo de análise textual `expanded_color_map_analysis.txt`
-
-## 📝 Conclusões Principais
-
-A análise comparativa demonstrou claramente que:
-
-1. **Problemas do mapa Rainbow**:
-   - Distorções na percepção de variações de dados
-   - Criação de fronteiras artificiais em dados contínuos
-   - Ordenação não intuitiva
-   - Sérios problemas de acessibilidade (especialmente em escala de cinza)
-
-2. **Vantagens dos mapas científicos**:
-   - Uniformidade perceptual
-   - Melhor acessibilidade para pessoas com deficiência na percepção de cores
-   - Ordem intuitiva através de gradientes de luminosidade consistentes
-   - Representação mais fiel dos dados sem criar padrões artificiais
-
-Para detalhes completos da análise, consulte o [relatório em PDF](Comparando_Mapas_de_Cores_para_Visualização_Científica__ou_Não_.pdf).
-
-## 🔗 Referências
-
-1. Crameri, F., Shephard, G.E. & Heron, P.J. The misuse of colour in science communication. Nat Commun 11, 5444 (2020). https://doi.org/10.1038/s41467-020-19160-7
-
-2. Hawkins, E. "Using Colour to Communicate" https://www.climate-lab-book.ac.uk/2016/why-rainbow-colour-scales-can-be-misleading/
-
-3. Our World in Data. Human Development Index (https://ourworldindata.org/grapher/human-development-index)
-
-4. Our World in Data. Life expectancy at birth (https://ourworldindata.org/grapher/life-expectancy)
-
-5. Our World in Data. Self-reported life satisfaction (https://ourworldindata.org/grapher/happiness-cantril-ladder)
-
-## 📄 Licença
+## 📜 Licença MIT
 
 Este projeto é disponibilizado sob a licença MIT.
